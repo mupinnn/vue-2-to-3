@@ -1,11 +1,11 @@
 <script setup>
-import TodoItem from "./TodoItem.vue";
+import TodoItem from './TodoItem.vue'
 
 defineProps({
-  todos: Array,
-});
+  todos: Array
+})
 
-defineEmits(["checkTodo", "deleteTodo"]);
+defineEmits(['checkTodo', 'deleteTodo'])
 </script>
 
 <template>

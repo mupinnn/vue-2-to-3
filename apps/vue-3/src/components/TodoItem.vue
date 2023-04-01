@@ -1,7 +1,7 @@
 <script setup>
 defineProps({
-  todo: Object,
-});
+  todo: Object
+})
 </script>
 
 <template>
@@ -9,10 +9,7 @@ defineProps({
     class="flex flex-col items-center bg-[#212833] cursor-pointer first-of-type:rounded-t-md"
     :class="{ 'bg-[#1d232c]': todo.completed }"
   >
-    <p
-      class="flex-grow break-all mb-2 p-4"
-      :class="{ 'line-through': todo.completed }"
-    >
+    <p class="flex-grow break-all mb-2 p-4" :class="{ 'line-through': todo.completed }">
       {{ todo.text }}
     </p>
     <span class="flex w-full">
