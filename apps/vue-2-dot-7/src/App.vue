@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-import Header from "./components/Header.vue";
+import Header from "./components/Header";
 import Todos from "./components/Todos.vue";
 import TodoForm from "./components/TodoForm.vue";
 

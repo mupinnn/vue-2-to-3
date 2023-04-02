@@ -7,6 +7,11 @@ module.exports = {
     node: true,
     browser: true,
   },
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
   extends: [
     "plugin:vue/essential",
     "eslint:recommended",
