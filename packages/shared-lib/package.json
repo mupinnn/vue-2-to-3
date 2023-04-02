@@ -2,6 +2,14 @@
   "name": "shared-lib",
   "version": "0.0.0",
   "private": true,
+  "main": "./dist/Vue2To3SharedLib.umd.js",
+  "module": "./dist/Vue2To3SharedLib.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/Vue2To3SharedLib.es.js",
+      "require": "./dist/Vue2To3SharedLib.umd.js"
+    }
+  },
   "scripts": {
     "dev": "vite build --watch",
     "build": "vite build",

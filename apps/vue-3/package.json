@@ -10,6 +10,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "shared-lib": "workspace:*",
     "uuid": "^9.0.0",
     "vue": "^3.2.47"
   },
