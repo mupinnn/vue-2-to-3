@@ -107,6 +107,31 @@ importers:
       tailwindcss: 3.3.1_postcss@8.4.21
       vite: 4.2.1
 
+  packages/shared-lib:
+    specifiers:
+      '@rushstack/eslint-patch': ^1.2.0
+      '@vitejs/plugin-vue': ^4.0.0
+      '@vitejs/plugin-vue-jsx': ^3.0.0
+      '@vue/eslint-config-prettier': ^7.1.0
+      eslint: ^8.34.0
+      eslint-plugin-vue: ^9.9.0
+      prettier: ^2.8.4
+      vite: ^4.1.4
+      vue: ^3.2.47
+      vue-demi: ^0.13.11
+    dependencies:
+      vue-demi: 0.13.11_vue@3.2.47
+    devDependencies:
+      '@rushstack/eslint-patch': 1.2.0
+      '@vitejs/plugin-vue': 4.1.0_vite@4.2.1+vue@3.2.47
+      '@vitejs/plugin-vue-jsx': 3.0.1_vite@4.2.1+vue@3.2.47
+      '@vue/eslint-config-prettier': 7.1.0_fjzellzblqyf2bzxk7qvjavefi
+      eslint: 8.37.0
+      eslint-plugin-vue: 9.10.0_eslint@8.37.0
+      prettier: 2.8.7
+      vite: 4.2.1
+      vue: 3.2.47
+
 packages:
 
   /@achrinza/node-ipc/9.2.6:
@@ -7705,6 +7730,21 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
+
+  /vue-demi/0.13.11_vue@3.2.47:
+    resolution: {integrity: sha512-IR8HoEEGM65YY3ZJYAjMlKygDQn25D5ajNFNoKh9RSDMQtlzCxtfQjdQgv9jjK+m3377SsJXY8ysq8kLCZL25A==}
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^3.0.0-0 || ^2.6.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      vue: 3.2.47
+    dev: false
 
   /vue-eslint-parser/8.3.0_eslint@7.32.0:
     resolution: {integrity: sha512-dzHGG3+sYwSf6zFBa0Gi9ZDshD7+ad14DGOdTLjruRVgZXe2J+DcZ9iUhyR48z5g1PqRa20yt3Njna/veLJL/g==}
