@@ -1,10 +1,11 @@
 {
+  "packageManager": "pnpm@7.31.0",
   "name": "vue-2-to-3",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently -k \"pnpm --filter shared-lib dev\" \"wait-on ./packages/shared-lib/dist/Vue2To3SharedLib.es.js && turbo run dev --filter='./apps/*'\"",
+    "dev": "concurrently -k \"pnpm --filter shared-lib dev\" \"wait-on ./packages/shared-lib/dist/v3/Vue2To3SharedLib.es.js && turbo run dev --filter='./apps/*'\"",
     "build": "turbo run build",
     "lint": "turbo run lint"
   },
@@ -15,5 +16,19 @@
     "concurrently": "^8.0.1",
     "turbo": "^1.8.8",
     "wait-on": "^7.0.1"
+  },
+  "pnpm": {
+    "packageExtensions": {
+      "@vitejs/plugin-vue2": {
+        "dependencies": {
+          "vue2": "npm:vue@^2.7.14"
+        }
+      },
+      "@vitejs/plugin-vue2-jsx": {
+        "dependencies": {
+          "vue2": "npm:vue@^2.7.14"
+        }
+      }
+    }
   }
 }

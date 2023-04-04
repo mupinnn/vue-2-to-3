@@ -6,6 +6,7 @@
 
     <div class="flex flex-col mt-2 bg-slate-600 rounded-md w-full">
       <div class="p-2">
+        <Counter />
         <p>This counter component using shared composable that compatible with Vue 2 and 3!</p>
         <p>Counter: {{ counter }}</p>
       </div>

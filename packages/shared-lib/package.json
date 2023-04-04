@@ -2,17 +2,23 @@
   "name": "shared-lib",
   "version": "0.0.0",
   "private": true,
-  "main": "./dist/Vue2To3SharedLib.umd.js",
-  "module": "./dist/Vue2To3SharedLib.es.js",
+  "main": "./dist/v3/Vue2To3SharedLib.umd.js",
+  "module": "./dist/v3/Vue2To3SharedLib.es.js",
   "exports": {
     ".": {
-      "import": "./dist/Vue2To3SharedLib.es.js",
-      "require": "./dist/Vue2To3SharedLib.umd.js"
+      "import": "./dist/v3/Vue2To3SharedLib.es.js",
+      "require": "./dist/v3/Vue2To3SharedLib.umd.js"
+    },
+    "./v2": {
+      "import": "./dist/v2.7/Vue2To3SharedLib.es.js",
+      "require": "./dist/v2.7/Vue2To3SharedLib.umd.js"
     }
   },
   "scripts": {
-    "dev": "vite build --watch",
-    "build": "vite build",
+    "dev": "pnpm run build:3 --watch",
+    "build": "pnpm run build:2.6 && pnpm run build:2.7 && pnpm run build:3",
+    "build:2": "vue-demi-switch 2.7 vue2 && vite build --config \"./config/vite-2.7.config.js\"",
+    "build:3": "vue-demi-switch 3 vue && vite build --config \"./config/vite-3.config.js\"",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "format": "prettier --write src/"
   },
@@ -20,12 +26,16 @@
     "@rushstack/eslint-patch": "^1.2.0",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vitejs/plugin-vue-jsx": "^3.0.0",
+    "@vitejs/plugin-vue2": "^2.2.0",
+    "@vitejs/plugin-vue2-jsx": "^1.1.0",
+    "@vue/composition-api": "^1.7.1",
     "@vue/eslint-config-prettier": "^7.1.0",
     "eslint": "^8.34.0",
     "eslint-plugin-vue": "^9.9.0",
     "prettier": "^2.8.4",
     "vite": "^4.1.4",
-    "vue": "^3.2.47"
+    "vue": "^3.2.47",
+    "vue2": "npm:vue@^2.7.14"
   },
   "peerDependencies": {
     "@vue/composition-api": "^1.7.1",

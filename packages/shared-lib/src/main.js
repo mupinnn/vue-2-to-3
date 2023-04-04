@@ -4,7 +4,7 @@ const Vue2To3SharedLib = {
   install: (app) => {
     for (const componentKey in components) {
       const component = components[componentKey]
-      app.component(component.name, component)
+      app.component(component?.name || component?.__name, component)
     }
   }
 }

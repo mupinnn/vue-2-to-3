@@ -1,3 +1,9 @@
+<script>
+export default {
+  name: "Counter",
+}
+</script>
+
 <script setup>
 import { useCounter } from '../composables'
 
