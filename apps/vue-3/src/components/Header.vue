@@ -5,6 +5,7 @@
     <p>LocalStorage based to-do list build with Vue (3.2.47)!</p>
 
     <div class="flex flex-col mt-2 bg-slate-600 rounded-md w-full">
+      <CounterOptions />
       <div class="p-2">
         <Counter />
         <p>This counter component using shared composable that compatible with Vue 2 and 3!</p>
